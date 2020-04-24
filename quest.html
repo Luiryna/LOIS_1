@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    
+	     <title>Test</title>
+         <link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+        <div class="font-family">
+
+	    <div id="questSection" >
+	        <div id="question" class="center font-size">
+	            <span class="title">Is it SDNF?</span>
+	            <span id="formula"></span>
+	        </div>
+	        <form id="answer">
+				<div class="center">
+					<div class="option">
+						<input type="radio" id="true" name="radio" class="radio" checked="true">
+						<label for="true" id="trueLabel">Yep</label>
+					</div>
+					<div class="option">
+						<input type="radio" id="false" name="radio" class="radio">
+						<label for="false" id="falseLabel">Nope</label>
+					</div>
+				</div> 
+	        </form>
+
+		<div class="center">
+			<button class="button" id="confirmButton" onclick="confirm()"><span>Confirm</span></button>
+	        <button class="button" id="nextButton" onclick="next()"><span>Next</span></button>
+	    </div>
+        </div>
+	        
+	    </div>
+	    
+	    <div id="resultSection" class="center">
+	        <span id="score"></span>
+			<a href="index.html"><input type="submit" class="button" value="Back"></a>
+	    </div>
+            
+	    <script src="quest.js"></script>
+            </div>
+	</body>
+</html>

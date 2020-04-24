@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
+body{
+    background-color: rgb(110, 105, 121);
+};
+
 .font-family{
     font-family: 'Lobster', cursive;
 }
@@ -8,10 +12,13 @@
     font-size: 25px;
 }
 
+.text {
+    text-align:  center;
+   }
+
 input{
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(55, 75, 94, 0.06);
-    font-family: 'Lobster', cursive;
     font-size: 18px;
 }
 
@@ -30,7 +37,7 @@ input[type=number]{
 input[type=button]{
     background-color: rgb(153, 88, 113);
     border: none;
-    color: rgb(255, 253, 253);
+    color: rgb(73, 60, 99);
     padding: 8px 8px;
     text-decoration: none;
     margin: 4px 2px;
@@ -40,3 +47,15 @@ input[type=button]{
 .font-weight{
     font-weight: 700;
 }
+
+.center {
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  button{
+    -moz-border-radius:  5px; /* Firefox */
+    -webkit-border-radius:  5px; /* Safari 4 */
+    border-radius:  5px; /* IE 9, Safari 5, Chrome */
+    font-size: 25px;
+  };
