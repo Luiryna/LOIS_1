@@ -3,7 +3,6 @@
 //Опредеоение константных перепенных
 const FORMULA_ID = "formula";
 const ANSWER_1_ID = "answer1";
-//const FORMULA_REGEXP = new RegExp('([(]([A-Z]|[0-1])((->)|(&)|(\\|)|(~))([A-Z]|[0-1])[)])|([(][!]([A-Z]|[0-1])[)])|([A-Z])|([0-1])','g');
 const FORMULA_REGEXP = new RegExp('([(]([A-Z])((->)|(&)|(\\|)|(~))([A-Z])[)])|([(][!]([A-Z])[)])|([A-Z])','g');
 const CONTAINER_ID = "container";
 const FORMULA_LABEL_ID = "formulaLabel";
@@ -28,7 +27,7 @@ function run() {
 }
 
 function checkSDNF(expression) {
-    if (expression.match(/\([A-Z]\)/g)){
+    if (expression.match(/\([A-Z]\)/g) || expression.match(/\([0-9]\)/g)){
         return false;
     }
     else if (expression != "") {
