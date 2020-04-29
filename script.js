@@ -3,7 +3,7 @@
 //Опредеоение константных перепенных
 const FORMULA_ID = "formula";
 const ANSWER_1_ID = "answer1";
-const FORMULA_REGEXP = new RegExp('([(]([A-Z])((->)|(&)|(\\|)|(~))([A-Z])[)])|([(][!]([A-Z])[)])|([A-Z])','g');
+const FORMULA_REGEXP = new RegExp('([(]([A-Z]|[0-1])((->)|(&)|(\\|)|(~))([A-Z]|[0-1])[)])|([(][!]([A-Z]|[0-1])[)])|([A-Z])|([0-1])','g');
 const CONTAINER_ID = "container";
 const FORMULA_LABEL_ID = "formulaLabel";
 const TABLE_ID = "table";
@@ -24,10 +24,17 @@ function run() {
     } else {
         alert("FALSE");
     }
+
+
+    if (obj != null && checkWithRegularExpressionFormula(formula)) {
+        printTableTruth(obj.table, obj.symbolSize);
+        document.getElementById(CONTAINER_ID).hidden = false;
+        }
+
 }
 
 function checkSDNF(expression) {
-    if (expression.match(/\([A-Z]\)/g) || expression.match(/\([0-9]\)/g)){
+    if (expression.match(/\([A-Z]\)/g) || expression.match(/\((!*)[0-9]+\)/g)){
         return false;
     }
     else if (expression != "") {
