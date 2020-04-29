@@ -26,15 +26,11 @@ function run() {
     }
 
 
-    if (obj != null && checkWithRegularExpressionFormula(formula)) {
-        printTableTruth(obj.table, obj.symbolSize);
-        document.getElementById(CONTAINER_ID).hidden = false;
-        }
 
 }
 
 function checkSDNF(expression) {
-    if (expression.match(/\((!*)[A-Z]\)/g) || expression.match(/\((!*)[0-9]+\)/g)){
+    if (expression.match(/\([A-Z]\)/g) || expression.match(/\((!*)[0-9]+\)/g)){
         return false;
     }
     else if (expression != "") {
