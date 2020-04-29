@@ -34,7 +34,7 @@ function run() {
 }
 
 function checkSDNF(expression) {
-    if (expression.match(/\([A-Z]\)/g) || expression.match(/\((!*)[0-9]+\)/g)){
+    if (expression.match(/\((!*)[A-Z]\)/g) || expression.match(/\((!*)[0-9]+\)/g)){
         return false;
     }
     else if (expression != "") {
@@ -77,6 +77,9 @@ function checkSDNF(expression) {
                 if (allBrackets.length / 2 != numOfOperations.length) {
                     return false;
                 }
+
+
+                //alert('Данное выражение не является логической формулой');
             }
         }
     } else {
